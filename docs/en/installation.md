@@ -1,52 +1,31 @@
-# Installation & Specifications
+# 3. Installation and Deployment Guide
 
-## System Requirements
-To ensure optimal performance, particularly when handling multiple concurrent tracking pixels and analytics logging, the following specifications are recommended.
+## 3.1 Minimum Hardware Specifications
+For stable operation in a production environment, specifically for handling concurrent tracking pixels and analytics logging, the following specifications are required:
+*   **CPU**: 1 vCPU (Dual-core recommended for background workers).
+*   **Memory**: 2GB RAM minimum (To accommodate PHP-FPM, Redis, and MySQL overhead).
+*   **Storage**: 500MB available disk space (Excluding application logs and user-uploaded assets).
 
-### 💻 Minimum Specifications
--   **Processor**: 1 vCPU (Dual-core or higher recommended).
--   **Memory (RAM)**: 2GB (Required for smooth operation of Redis and PHP-FPM).
--   **Disk Space**: 500MB for application files (SSD recommended).
--   **Operating System**: Linux-based (Ubuntu 22.04 LTS, Debian, or RHEL) or macOS.
-
-### 🛠 Technical Dependencies
--   **PHP**: Version 8.2 or 8.3.
--   **Web Server**: Nginx (Preferred) or Apache.
--   **Database**: MySQL 8.0 or MariaDB 10.6+.
--   **Cache/Queue**: Redis 6.0+.
--   **Node.js**: Version 18+ (For frontend asset compilation).
-
-## Installation Steps
-
-1.  **Clone Source Control**
+## 3.2 Deployment Checklist
+1.  **Environment Preparation**: Ensure PHP 8.2+, MySQL 8.0+, and Redis 6.0+ are installed.
+2.  **Source Acquisition**:
     ```bash
-    git clone <your-repository-url>
-    cd shortlink-project
+    git clone <repository-url>
+    cd project-root
     ```
-
-2.  **Environment Configuration**
-    Copy the template and modify variables according to your environment.
-    ```bash
-    cp .env.example .env
-    ```
-    Ensure `REDIS_HOST`, `DB_DATABASE`, and `APP_URL` are correctly set.
-
-3.  **Dependency Installation**
+3.  **Dependency Resolution**:
     ```bash
     composer install --optimize-autoloader --no-dev
     npm install
     npm run build
     ```
-
-4.  **Database & Security Initialization**
+4.  **System Initialization**:
     ```bash
+    cp .env.example .env
     php artisan key:generate
     php artisan migrate --force --seed
     php artisan storage:link
     ```
-
-5.  **Service Setup**
-    Ensure your queue worker is running to handle analytics:
-    ```bash
-    php artisan queue:work --queue=default --tries=3
-    ```
+5.  **Service Configuration**:
+    *   Configure a process manager (e.g., Supervisor) to run `php artisan queue:work` continuously for analytics processing.
+    *   Ensure Nginx/Apache points to the `public/` directory.

@@ -1,15 +1,15 @@
-# Pengantar
+# 1. Pendahuluan
 
-## Visi Proyek
-**ShortLink** dirancang untuk menjawab kompleksitas manajemen aset digital dan atribusi pemasaran. Di era di mana setiap klik memiliki nilai, sekadar sistem pengalihan (redirect) sederhana tidak lagi mencukupi. Bisnis memerlukan konsistensi brand, pengiriman yang aman, dan konteks analitik yang mendalam.
+## 1.1 Tinjauan Proyek
+ShortLink adalah solusi perangkat lunak yang dirancang khusus untuk pengelolaan siklus hidup tautan digital (URL). Sistem ini menjawab kebutuhan teknis atribusi pemasaran digital modern dengan menyediakan lingkungan yang aman, berkinerja tinggi, dan kolaboratif untuk manajemen pengalihan tautan.
 
-## Tujuan Utama
-Fokus utama dari proyek ini mencakup tiga pilar penting:
-1.  **Atribusi**: Menyediakan data granular pada interaksi pengguna melalui pelacakan GeoIP dan integrasi pixel pihak ketiga.
-2.  **Branding**: Memungkinkan organisasi untuk mempertahankan identitas visual bahkan dalam URL yang disingkat melalui alias kustom, halaman landas bertema, dan QR code bermerek.
-3.  **Skalabilitas**: Menggunakan pola arsitektur modern (Redis caching, Queue workers) untuk memastikan platform tetap responsif di bawah beban trafik yang tinggi.
+Berbeda dengan layanan penyingkat tautan generik, ShortLink dirancang untuk dihosting secara mandiri (self-hosted), memberikan kendali penuh kepada organisasi atas data pengalihan, logika pelacakan, dan aset branding mereka.
 
-## Target Penggunaan
--   **Pemasaran Enterprise**: Pelacakan kampanye khusus untuk periklanan digital multi-saluran.
--   **Kreator Konten**: Personalisasi profil media sosial terpusat melalui fitur "Link-in-Bio".
--   **Sistem Otomasi**: Integrasi API yang mulus untuk pembuatan tautan dinamis dalam alur kerja otomatis.
+## 1.2 Tujuan dan Ruang Lingkup
+Objektif utama dari sistem ini difokuskan pada tiga pilar:
+*   **Atribusi Granular**: Mengumpulkan parameter teknis dari trafik yang masuk (seperti lokasi geografis dan perangkat) untuk kebutuhan analisis pemasaran.
+*   **Kolaborasi Organisasi**: Segmentasi manajemen tautan ke dalam lingkungan kerja (workspace) yang terpisah dengan kontrol akses berbasis peran (RBAC).
+*   **Konsistensi Visual**: Mempertahankan integritas brand melalui penggunaan alias kustom, halaman landas bertema, serta QR code yang menyertakan identitas visual organisasi.
+
+## 1.3 Target Pembaca
+Panduan ini ditujukan bagi administrator sistem yang melakukan deployment platform, serta pengguna akhir (seperti manajer pemasaran atau pengembang) yang berinteraksi dengan dasbor dan API.

@@ -1,27 +1,21 @@
-# Usage Guide
+# 4. Operations Manual
 
-This chapter covers the essential workflows for managing your digital assets within the ShortLink dashboard.
+## 4.1 Link Lifecycle Management
+The primary workflow revolves around the generation and monitoring of redirects.
 
-## 🔗 Creating Your First Link
-Navigate to the "Links" section and click on "Create New Link".
--   **Destination URL**: The long URL you wish to shorten.
--   **Custom Alias**: Optional. If left blank, a secure alphanumeric code will be generated.
--   **Protection**: You can enable password protection and set expiration dates for temporary campaigns.
--   **Tracking Pixels**: Enter your GTM or Facebook Pixel ID to track conversion events on the redirect page.
+### 4.1.1 Parameter Configuration
+*   **Target URI**: The destination address (must include protocol).
+*   **Custom Identifiers (Aliases)**: User-defined strings for semantic clarity.
+*   **Security Overrides**: Implementation of password-based gating and temporal (expiration) constraints.
 
-## 👥 Collaborative Workspaces
-Workspaces allow multiple users to manage a shared set of links.
-1.  **Create Workspace**: Go to "Teams" and create a new environment (e.g., "Marketing Division").
-2.  **Add Members**: Invite users via email. They must be registered on the platform.
-3.  **Assign Roles**: Admins can manage members and workspace settings; Members can create and manage links.
-4.  **Shared Visibility**: Links created within a workspace are visible to all members of that group.
+## 4.2 Collaborative Operations (Workspaces)
+Workspaces facilitate segmented management of digital assets.
+*   **Membership Management**: Recruitment of collaborators via registered email addresses.
+*   **Role Identification**:
+    *   **Admin**: Controls environment configuration, member roles, and overall deletion policies.
+    *   **Member**: Authorised to create, modify, and monitor links within the assigned workspace.
 
-## 📊 Analytics & Reporting
-ShortLink provides real-time insights into your link performance.
--   **Dashboard Overview**: View aggregated click data, top-performing links, and geographic distribution.
--   **CSV Export**: For deep data analysis, use the "Export CSV" button in the specific link's detail view. This provides a raw feed of all unique visitor data.
-
-## 🔌 API Integration
-The system provides a robust API for automated link generation.
--   **Personal Access Tokens**: Generate a token from your "Settings" page.
--   **Endpoints**: Standard RESTful endpoints are available at `/api/v1/links`. Refer to the developer documentation for request/response schemas.
+## 4.3 Analytics and BI Export
+Data collected from traffic is visualized in the dashboard and available for deep processing via CSV.
+*   **Standard Reporting**: Direct visualization of click trends, geolocation data, and user agent distributions.
+*   **Data Export**: Generation of raw data streams (CSV) for integration with external Business Intelligence (BI) platforms.

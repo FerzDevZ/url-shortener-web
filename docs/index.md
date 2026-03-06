@@ -1,19 +1,19 @@
-# Documentation Portal
+# ShortLink: Official Documentation Portal
 
-Welcome to the official documentation for **ShortLink**, an enterprise-grade URL management and analytics platform.
+This portal contains the authoritative technical documentation, architectural specifications, and operational manuals for the ShortLink platform.
 
-Please select your preferred language:
+## Select Manual Language / Pilih Bahasa Panduan:
 
-- [English (International)](en/introduction.md)
-- [Bahasa Indonesia (Lokal)](id/pengantar.md)
+*   **[English Version (Software Manual)](en/introduction.md)**
+    *   1. Introduction
+    *   2. Architecture & Design
+    *   3. Installation & Deployment
+    *   4. Operations Guide
 
 ---
 
-# Portal Dokumentasi
-
-Selamat datang di dokumentasi resmi **ShortLink**, platform manajemen URL dan analitik kelas enterprise.
-
-Silakan pilih bahasa yang Anda inginkan:
-
-- [English (International)](en/introduction.md)
-- [Bahasa Indonesia (Lokal)](id/pengantar.md)
+*   **[Bahasa Indonesia (Manual Perangkat Lunak)](id/pengantar.md)**
+    *   1. Pendahuluan
+    *   2. Arsitektur & Desain Teknis
+    *   3. Instalasi & Deployment
+    *   4. Panduan Penggunaan
