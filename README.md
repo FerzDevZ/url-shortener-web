@@ -1,5 +1,8 @@
 # ShortLink: Advanced URL Management & Analytics Platform
 
+> [!NOTE]
+> Detailed documentation is available in the [Documentation Portal](docs/index.md) (Bilingual: EN/ID).
+
 ShortLink is a comprehensive, enterprise-grade URL shortening solution built for performance, branding, and deep analytical insight. This platform empowers users and teams to manage their digital footprint through customizable links, high-resolution QR codes, and real-time tracking integration.
 
 ## 🚀 Key Features
